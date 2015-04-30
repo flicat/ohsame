@@ -1,0 +1,698 @@
+@charset 'utf-8';
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+    font-family: sans-serif; /* 1 */
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+    margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block; /* 1 */
+    vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+    display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+    background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+    font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+    font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+    font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+    border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
+figure {
+    margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+    overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit; /* 1 */
+    font: inherit; /* 2 */
+    margin: 0; /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+    overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+    text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+    line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+    overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+    font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+/* flicat
+ ==================================================================== */
+/* public */
+body,
+html {
+    font-size: 16px;
+}
+body,
+html,
+.wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+ul,li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.wrap {
+    background: url(../images/bg.png) no-repeat center #61d6f5;
+    background-size: 100%;
+}
+.score,
+.cloud {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+.cloud {
+    height: 100%;
+}
+/* score */
+.score {
+    padding-top: 0.5rem;
+    text-align: center;
+    color: #492400;
+}
+.score em {
+    font-style: normal;
+}
+.score .current-score {
+    display: inline-block;
+    width: 30%;
+    border-bottom: 1px solid #492400;
+    font: 900 1rem/2 'sans-serif';
+}
+.score .best-score {
+    display: block;
+    font: 400 1rem/1.5 'sans-serif';
+}
+
+ /* chimney */
+.chimney {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+.chimney .logo {
+    display: block;
+    position: absolute;
+    left: 10%;
+    bottom: 24rem;
+    width: 5rem;
+    height: 3rem;
+    background: url(../images/gf-logo.png) no-repeat 0 0;
+    background-size: contain;
+}
+.chimney .role-list,
+.chimney .chimney-list {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+/* role-list */
+.chimney .role-list {
+    z-index: 3;
+    background-color: #fff;
+}
+.chimney .role-list p {
+    font: 400 1rem/1.5rem 'microsoft yahei';
+    color: #0af;
+    text-align: center;
+    margin: 0.5em 0;
+}
+.chimney .role-list ul {
+    width: 100%;
+    display: -webkit-box;
+    display: box;
+    -webkit-box-pack: justify;
+    box-pack: justify;
+}
+.chimney .role-list .role-item {
+    height: 6rem;
+    padding: 0 10px;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+}
+.role-list .role-item .role-icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.role-list .role-1 .role-icon {
+    background-image: url(../images/thumb-1-gray.jpg);
+}
+.role-list .role-2 .role-icon {
+    background-image: url(../images/thumb-2-gray.jpg);
+}
+.role-list .role-3 .role-icon {
+    background-image: url(../images/thumb-3-gray.jpg);
+}
+.role-list .role-4 .role-icon {
+    background-image: url(../images/thumb-4-gray.jpg);
+}
+.role-list .role-1 .current {
+    background-image: url(../images/thumb-1.jpg);
+}
+.role-list .role-2 .current {
+    background-image: url(../images/thumb-2.jpg);
+}
+.role-list .role-3 .current {
+    background-image: url(../images/thumb-3.jpg);
+}
+.role-list .role-4 .current {
+    background-image: url(../images/thumb-4.jpg);
+}
+
+/* chimney-list */
+.chimney .chimney-list {
+    z-index: 2;
+    height: 100%;
+}
+.chimney-list .chimney-item {
+    position: absolute;
+    bottom: 8rem;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.chimney-list .chimney-1 {
+    left: 0;
+}
+.chimney-list .chimney-2 {
+    left: 100%;
+}
+.chimney-list .chimney-3 {
+    left: 200%;
+}
+.chimney-list .chimney-4 {
+    left: 300%;
+}
+.chimney-list .chimney-front,
+.chimney-list .chimney-back {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 8rem;
+}
+.chimney-list .chimney-front {
+    z-index: 3;
+}
+.chimney-list .chimney-back {
+    z-index: 0;
+}
+.chimney-list .chimney-1 .chimney-front {
+    background-image: url(../images/chimney-1.png);
+}
+.chimney-list .chimney-2 .chimney-front {
+    background-image: url(../images/chimney-2.png);
+}
+.chimney-list .chimney-3 .chimney-front {
+    background-image: url(../images/chimney-3.png);
+}
+.chimney-list .chimney-4 .chimney-front {
+    background-image: url(../images/chimney-4.png);
+}
+.chimney-list .chimney-1 .chimney-back {
+    background-image: url(../images/chimney-layout-1.png);
+}
+.chimney-list .chimney-2 .chimney-back {
+    background-image: url(../images/chimney-layout-2.png);
+}
+.chimney-list .chimney-3 .chimney-back {
+    background-image: url(../images/chimney-layout-3.png);
+}
+.chimney-list .chimney-4 .chimney-back {
+    background-image: url(../images/chimney-layout-4.png);
+}
+
+/* role */
+.chimney-list .role {
+    position: absolute;
+    width: 32%;
+    left: 34%;
+    bottom: 5rem;
+    z-index: 2;
+    font-size: 0;
+}
+.chimney-list .role .head,
+.chimney-list .role .neck,
+.chimney-list .role .body {
+    display: block;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+}
+.chimney-1 .role .head {
+    height: 4.3rem;
+    background-image: url(../images/role-1-head.png);
+}
+.chimney-1 .role .neck {
+    height: 0.8rem;
+    background-image: url(../images/role-1-neck.png);
+}
+.chimney-1 .role .body {
+    height: 4.9rem;
+    background-image: url(../images/role-1-body.png);
+}
+.chimney-2 .role .head {
+    height: 4.3rem;
+    background-image: url(../images/role-2-head.png);
+}
+.chimney-2 .role .neck {
+    height: 0.8rem;
+    background-image: url(../images/role-2-neck.png);
+}
+.chimney-2 .role .body {
+    height: 4.9rem;
+    background-image: url(../images/role-2-body.png);
+}
+.chimney-3 .role .head {
+    height: 4.3rem;
+    background-image: url(../images/role-3-head.png);
+}
+.chimney-3 .role .neck {
+    height: 0.8rem;
+    background-image: url(../images/role-3-neck.png);
+}
+.chimney-3 .role .body {
+    height: 4.9rem;
+    background-image: url(../images/role-3-body.png);
+}
+.chimney-4 .role .head {
+    height: 4.3rem;
+    background-image: url(../images/role-4-head.png);
+}
+.chimney-4 .role .neck {
+    height: 0.8rem;
+    background-image: url(../images/role-4-neck.png);
+}
+.chimney-4 .role .body {
+    height: 4.9rem;
+    background-image: url(../images/role-4-body.png);
+}
