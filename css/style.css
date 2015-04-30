@@ -447,7 +447,7 @@ ul,li {
     margin: 0;
 }
 .wrap {
-    background: url(../images/bg.png) no-repeat center #61d6f5;
+    background: url(../images/bg.png) no-repeat center bottom #61d6f5;
     background-size: 100%;
 }
 .score,
