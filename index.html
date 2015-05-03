@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no, email=no">
     <title>拉脖子游戏</title>
     <link rel="stylesheet" href="css/style.css"/>
@@ -10,47 +10,47 @@
 <body>
 <div class="wrap">
     <div class="score">
-        <span class="current-score"><em>0</em> M</span>
-        <span class="best-score">best: <em>0</em> M</span>
+        <span class="current-score"><em id="current-score">0</em> M</span>
+        <span class="best-score">best: <em id="best-score">0</em> M</span>
     </div>
-    <div class="cloud"></div>
-    <div class="chimney">
+    <div class="cloud" id="cloud"></div>
+    <div class="chimney" id="chimney">
         <span class="logo"></span>
-        <div class="chimney-list">
+        <div class="chimney-list" id="role-list">
             <ul>
                 <li class="chimney-item chimney-1">
                     <div class="chimney-front"></div>
-                    <div class="role">
-                        <span class="head"></span>
-                        <span class="neck"></span>
-                        <span class="body"></span>
+                    <div class="role" id="role-1">
+                        <span class="head" id="role-1-head"></span>
+                        <span class="neck" id="role-1-neck"></span>
+                        <span class="body" id="role-1-body"></span>
                     </div>
                     <div class="chimney-back"></div>
                 </li>
                 <li class="chimney-item chimney-2">
                     <div class="chimney-front"></div>
-                    <div class="role">
-                        <span class="head"></span>
-                        <span class="neck"></span>
-                        <span class="body"></span>
+                    <div class="role" id="role-2">
+                        <span class="head" id="role-2-head"></span>
+                        <span class="neck" id="role-2-neck"></span>
+                        <span class="body" id="role-2-body"></span>
                     </div>
                     <div class="chimney-back"></div>
                 </li>
                 <li class="chimney-item chimney-3">
                     <div class="chimney-front"></div>
-                    <div class="role">
-                        <span class="head"></span>
-                        <span class="neck"></span>
-                        <span class="body"></span>
+                    <div class="role" id="role-3">
+                        <span class="head" id="role-3-head"></span>
+                        <span class="neck" id="role-3-neck"></span>
+                        <span class="body" id="role-3-body"></span>
                     </div>
                     <div class="chimney-back"></div>
                 </li>
                 <li class="chimney-item chimney-4">
                     <div class="chimney-front"></div>
-                    <div class="role">
-                        <span class="head"></span>
-                        <span class="neck"></span>
-                        <span class="body"></span>
+                    <div class="role" id="role-4">
+                        <span class="head" id="role-4-head"></span>
+                        <span class="neck" id="role-4-neck"></span>
+                        <span class="body" id="role-4-body"></span>
                     </div>
                     <div class="chimney-back"></div>
                 </li>
@@ -60,16 +60,16 @@
             <p>选择你的角色</p>
             <ul>
                 <li class="role-item role-1">
-                    <span class="role-icon current"></span>
+                    <span class="role-icon current" id="role-icon-1"></span>
                 </li>
                 <li class="role-item role-2">
-                    <span class="role-icon"></span>
+                    <span class="role-icon" id="role-icon-2"></span>
                 </li>
                 <li class="role-item role-3">
-                    <span class="role-icon"></span>
+                    <span class="role-icon" id="role-icon-3"></span>
                 </li>
                 <li class="role-item role-4">
-                    <span class="role-icon"></span>
+                    <span class="role-icon" id="role-icon-4"></span>
                 </li>
             </ul>
         </div>

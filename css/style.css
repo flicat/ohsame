@@ -503,6 +503,7 @@ ul,li {
     position: absolute;
     left: 0;
     bottom: 0;
+    padding-bottom: 0.5rem;
     width: 100%;
 }
 /* role-list */

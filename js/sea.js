@@ -9,7 +9,7 @@
         base: './js/',
         // 配置别名
         alias: {
-            "zepto": "zepto-min.js?"+ timeStamp,                     // zepto
+            "zepto": "zepto.js?"+ timeStamp,                     // zepto
             "expansion": "expansion.js?"+ timeStamp,                     // expansion
             "scene": "scene.js?"+ timeStamp                // scene
         }
