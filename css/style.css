@@ -487,6 +487,10 @@ ul,li {
     width: 100%;
     height: 100%;
     z-index: 1;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 .chimney .logo {
     display: block;
@@ -641,13 +645,24 @@ ul,li {
 .chimney-list .role .head,
 .chimney-list .role .neck,
 .chimney-list .role .body {
+    position: relative;
     display: block;
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100%;
+    -webkit-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+}
+.chimney-list .role .head {
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    z-index: 1;
+}
+.chimney-list .role .neck {
     -webkit-transform-origin: 0 100%;
     transform-origin: 0 100%;
+    z-index: 0;
 }
 .chimney-1 .role .head {
     height: 4.3rem;
