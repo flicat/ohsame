@@ -190,7 +190,7 @@ define(function(require, exports, module) {
         constructor: RoleSwitch,
         // 切换角色
         switchRole: function(index) {
-            var diff = index * -25;
+            var diff = index * -winWidth;
             if(this.currentRole){
                 // 隐藏旧角色
                 this.currentRole.role.css({
@@ -204,10 +204,10 @@ define(function(require, exports, module) {
                 '-webkit-transform': 'translate3d(0,0,0)',
                 'transform':         'translate3d(0,0,0)'
             });
-            // 切换效果
+            // 切换场景
             this.roleList.css({
-                '-webkit-transform': 'translate3d(' + diff + '%,0,0)',
-                'transform':         'translate3d(' + diff + '%,0,0)'
+                '-webkit-transform': 'translate3d(' + diff + 'px,0,0)',
+                'transform':         'translate3d(' + diff + 'px,0,0)'
             });
             // 头距离屏幕上方的高度
             offsetTop = this.currentRole.offsetTop;
@@ -216,7 +216,9 @@ define(function(require, exports, module) {
         init: function() {
             var that = this;
             var currentIcon = that.iconArr[0];
-            this.switchRole(0);
+            // 初始化第一个角色
+            that.switchRole(0);
+            // 绑定点击事件
             $.each(that.iconArr, function(index, icon) {
                 icon.on('touchend', function() {
                     currentIcon.removeClass('current');

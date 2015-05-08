@@ -9,7 +9,7 @@ define(function(require, exports, module) {
     var zepto = require('zepto');
     var scene = require('scene');
 
-    var url = 'http://192.168.0.206:4001/ohsame';
+    var url = seajs.data.cwd;
 
     /** @description 需要加载的图片资源 */
     var images = [
