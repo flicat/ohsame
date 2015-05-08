@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>test youku</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .wrap {
+            width: 300%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .wrap .page {
+            width: 33.33333333%;
+            height: 200%;
+            overflow: hidden;
+        }
+        .wrap .page .content {
+            width: 100%;
+            height: 50%;
+            overflow-x: hidden;
+            overflow-Y: auto;
+        }
+        p {
+            text-align: center;
+            font: 900 120px/120px 'microsoft yahei';
+            margin-top: 300px;
+        }
+        button {
+            width: 200px;
+            font-size: 36px;
+            height: 3em;
+            line-height: 3em;
+            display: block;
+            margin: 0 auto;
+        }
+        nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 99999;
+            width: 100%;
+            height: 61px;
+            text-align: center;
+            background: #0AF;
+            font: 900 40px/60px 'microsoft yahei';
+        }
+        nav a {
+            text-decoration: none;
+            padding: 0 20px;
+            color: #fff;
+        }
+        nav a.current {
+            color: #fa0;
+        }
+        .wrap {
+            position: relative;
+            -webkit-transform-origin: 0 0;
+                    transform-origin: 0 0;
+            -webkit-transition: all 1s ease;
+                    transition: all 1s ease;
+            transform: translateX(-33.33333333%);
+            /*transform: translateX(-66.66666666%);*/
+        }
+        .wrap .page {
+            position: absolute;
+            top: 0;
+            -webkit-transform-origin: 0 0;
+                    transform-origin: 0 0;
+            -webkit-transition: all 1s ease;
+                    transition: all 1s ease;
+        }
+        .wrap .page1 {
+            left: 0;
+        }
+        .wrap .page2 {
+            left: 33.33333333%;
+            /*transform: translateY(-50%);*/
+        }
+        .wrap .page3 {
+            left: 66.66666666%;
+        }
+    </style>
+</head>
+<body>
+    <nav id="nav">
+        <a href="javascript:;" id="nav-1">1</a>
+        <a href="javascript:;" id="nav-2">2</a>
+        <a href="javascript:;" id="nav-3">3</a>
+    </nav>
+    <div class="wrap" id="wrap">
+        <div id="page1" class="page page1">
+            <div class="content content1">
+                <p>1</p>
+            </div>
+        </div>
+        <div id="page2" class="page page2">
+            <div class="content content1">
+                <p>2</p>
+                <button id="go-youku">GO ↓</button>
+            </div>
+            <div class="content content2">
+                <iframe runat="server" src="http://www.youku.com/" width="100%" height="6995" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes"></iframe>
+            </div>
+        </div>
+        <div id="page3" class="page page3">
+            <div class="content content1">
+                <p>3</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var currentPage, currentNav;
+        var wrap = document.getElementById('wrap');
+
+        var nav1 = document.getElementById('nav-1');
+        var nav2 = document.getElementById('nav-2');
+        var nav3 = document.getElementById('nav-3');
+
+        var page1 = document.getElementById('page1');
+        var page2 = document.getElementById('page2');
+        var page3 = document.getElementById('page3');
+
+        var btn_youku = document.getElementById('go-youku');
+
+        var content = document.querySelectorAll('.content1');
+        var nav = document.getElementById('nav');
+
+        var scroll_content = function(page, diff) {
+            page.style.transform = page.style.webkitTransform = 'translateY(' + diff + '%)';
+        };
+
+        var content_timer;
+        var reset_content = function(a, b) {
+            clearTimeout(content_timer);
+            content_timer = setTimeout(function() {
+                scroll_content(a, 0);
+                scroll_content(b, 0);
+            }, 1000);
+        };
+
+        var scroll = {
+            scroll_1: function() {
+                wrap.style.transform = wrap.style.webkitTransform = 'translateX(0)';
+                if(currentNav){
+                    currentNav.classList.remove('current');
+                }
+                scroll_content(page1, 0);
+                reset_content(page2, page3);
+                currentPage = page1;
+                currentNav = nav1;
+                currentNav.classList.add('current');
+            },
+            scroll_2: function() {
+                wrap.style.transform = wrap.style.webkitTransform = 'translateX(' + (-100/3) + '%)';
+                if(currentNav){
+                    currentNav.classList.remove('current');
+                }
+                scroll_content(page2, 0);
+                reset_content(page1, page3);
+                currentPage = page2;
+                currentNav = nav2;
+                currentNav.classList.add('current');
+            },
+            scroll_3: function() {
+                wrap.style.transform = wrap.style.webkitTransform = 'translateX(' + (-200/3) + '%)';
+                if(currentNav){
+                    currentNav.classList.remove('current');
+                }
+                scroll_content(page3, 0);
+                reset_content(page1, page2);
+                currentPage = page3;
+                currentNav = nav3;
+                currentNav.classList.add('current');
+            }
+        };
+
+        nav1.addEventListener('click', scroll.scroll_1, false);
+        nav2.addEventListener('click', scroll.scroll_2, false);
+        nav3.addEventListener('click', scroll.scroll_3, false);
+
+        btn_youku.addEventListener('click', function() {
+            scroll_content(page2, -50);
+        }, false);
+
+        // 鼠标滚动事件
+        var index = 1, timer;
+        var handle = function (delta) {
+            (function(delta) {
+                clearTimeout(timer);
+                timer = setTimeout(function() {
+                    if (delta < 0 && index < 3) {
+                        index++;
+                    } else if(index > 1) {
+                        index--;
+                    }
+                    scroll['scroll_' + index]();
+                }, 500);
+            })(delta);
+        };
+        var wheel = function (event){
+            var delta = 0;
+            if (!event) /* For IE. */
+                event = window.event;
+            if (event.wheelDelta) { /* IE/Opera. */
+                delta = event.wheelDelta / 120;
+                if (window.opera)
+                    delta = -delta;
+            }
+            else
+
+            if (event.detail) {
+                delta = -event.detail / 3;
+            }
+            if (delta)
+                handle(delta);
+            if (event.preventDefault)
+                event.preventDefault();
+            event.returnValue = false;
+        };
+
+        [].slice.call(content).forEach(function(item) {
+            item.addEventListener('DOMMouseScroll', wheel, false);
+            item.onmousewheel = wheel;
+        });
+        nav.addEventListener('DOMMouseScroll', wheel, false);
+        nav.onmousewheel = wheel;
+
+        scroll.scroll_1();
+    </script>
+</body>
+</html>

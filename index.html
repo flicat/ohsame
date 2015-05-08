@@ -5,19 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no, email=no">
     <title>拉脖子游戏</title>
-    <link rel="stylesheet" href="css/style.css"/>
+    <script type="text/javascript">
+        document.write('<link rel="stylesheet" href="css/style.css?' + (new Date() - 0) + '"/>');
+    </script>
+    <!--<link rel="stylesheet" href="css/style.css"/>-->
 </head>
 <body>
 <div class="wrap">
+    <!--200米高的礼物-->
+    <div class="prize" id="prize"></div>
+    <!--分数-->
     <div class="score">
-        <span class="current-score"><em id="current-score">0</em> M</span>
-        <span class="best-score">best: <em id="best-score">0</em> M</span>
+        <span class="current-score"><em id="current-score">0</em> m</span>
+        <span class="best-score">best: <em id="best-score">0</em> m</span>
+        <span id="tips" class="tips"></span>
+        <span id="collect" class="collect"></span>
     </div>
-    <div class="cloud" id="cloud"></div>
+    <!--白云-->
+    <div class="cloud" id="cloud">
+        <div class="cloud-wrap">
+            <div class="cloud-item"></div>
+        </div>
+    </div>
+    <!--角色-->
     <div class="chimney" id="chimney">
         <span class="logo"></span>
-        <div class="chimney-list" id="role-list">
-            <ul>
+        <div class="chimney-list">
+            <ul id="role-list">
                 <li class="chimney-item chimney-1">
                     <div class="chimney-front"></div>
                     <div class="role" id="role-1">
@@ -73,6 +87,40 @@
                 </li>
             </ul>
         </div>
+    </div>
+    <!--提示弹窗-->
+    <div id="tip-question" class="popup tip-win" style="display: none">
+        <div class="popup-content">
+            <img src="images/tip.gif" alt="tip"/>
+            <p class="normal">可爱的小动物们都被卡住了</p>
+            <p class="bigger">点击开始/不断上拉</p>
+            <p class="normal">看看能把他们脖子拉多长吧</p>
+            <button class="btn btn-defined">OK</button>
+        </div>
+    </div>
+    <!--最佳成绩弹窗-->
+    <div id="tip-score" class="popup best-score" style="display: none">
+        <div class="popup-content">
+            <i class="icon-close">&times;</i>
+            <p class="last-score"><span id="last-score">0</span>m</p>
+            <p class="normal">点击右上角分享游戏成就，挑战好友。分享给好友还能参与抽奖喔~~</p>
+            <button class="btn btn-defined" id="btn-share">立即分享</button>
+        </div>
+    </div>
+    <!--分享遮罩-->
+    <div id="share" class="popup share" style="display: none"></div>
+    <!--loading-->
+    <div id="loading" class="popup loading">
+         <span class="loading-wrap">
+            <i class="icon icon-1"></i>
+            <i class="icon icon-2"></i>
+            <i class="icon icon-3"></i>
+            <i class="icon icon-4"></i>
+            <i class="icon icon-5"></i>
+            <i class="icon icon-6"></i>
+            <i class="icon icon-7"></i>
+            <i class="icon icon-8"></i>
+        </span>
     </div>
 </div>
 <script type="text/javascript" src="js/sea.js"></script>
