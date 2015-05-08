@@ -678,8 +678,6 @@ ul,li {
     top: 0;
     -webkit-transition: all 0.3s ease;
             transition: all 0.3s ease;
-    -webkit-transform: translate3d(-75%, 0, 0);
-            transform: translate3d(-75%, 0, 0);
 }
 .chimney-list .chimney-item {
     position: absolute;
